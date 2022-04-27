@@ -5,7 +5,7 @@
 
 
 # *Index*
-- [sky130RTLDesignAndSynthesisWorkshop](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md)
-    - [Brief Description of the Workshop](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md)
+- [sky130RTLDesignAndSynthesisWorkshop](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#sky130-RTLDesign-And-Synthesis-Workshop)
+    - [Brief Description of the Workshop](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Brief-Description-of-the-Workshop)
 
 

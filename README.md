@@ -5,16 +5,22 @@
 
 
 # *Index*
-- [RTL design using Verilog with SKY130 Technology](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
+* [Introduction to tools](#introduction-to-tools)
+* [Day 1](#day-1)
+  * [Simulation Flow](#simulation-flow)
+  * [Synthesis Flow](#synthesis-flow)
+* [Day 2](#day-2)
+  * [Library files](#library-files)
+  * [Hierarchial and Flat Synthesis](#hierarchial-and-flat-synthesis)
+  * [Flipflop Coding and Synthesis](#flipflop-coding-and-synthesis)
+* [Day 3](#day-3)
+  * [Combinational Logic Optimisations](#combinational-logic-optimisations)
+  * [Sequential Logic Optimisations](#sequential-logic-optimisations)
+* [Day 4](#day-4)
+  * [GLS and Synthesis Simulation Mismatch](#gls-and-synthesis-simulation-mismatch)
+  * [Blocking and Non Blocking Statements](#blocking-and-non-blocking-statements) 
+* [Day 5](#day-5)
+  * [IF and CASE Statements](#if-and-case-statements)
+  * [FOR loop and FOR GENERATE](#for-loop-and-for-generate)
+* [Acknowledgement](#acknowledgement)
 
-    - [Brief Description of the Workshop](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
-
-- [Day 1 - Introduction to Verilog RTL design and Synthesis](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
-
-       - [Introduction to open-source simulator iverilog](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/#part-1-Introduction-to-open-source-simulator-iverilog)
-       
-       - [Labs using iverilog and gtkwave](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/#part-2-Labs-using-iverilog-and-gtkwave)
-       
-       - [Introduction to Yosys and Logic synthesis](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/#part-3-Introduction-to-Yosys-and Logic-synthesis)
-       
-       - [Labs using Yosys and Sky130 PDKs](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/#part-4-Labs-using-Yosys-and-Sky130 PDKs)

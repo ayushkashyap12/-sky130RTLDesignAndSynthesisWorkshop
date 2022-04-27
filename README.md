@@ -42,11 +42,4 @@ Labs on "Incomplete If Case"
 Labs on "Incomplete overlapping Case"
 for loop and for generate
 Labs on "for loop" and "for generate"
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
 

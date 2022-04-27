@@ -5,18 +5,11 @@
 
 
 # *Index*
-- [RTL design using Verilog with SKY130 Technology]
-(https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
-    - [Brief Description of the Workshop]
-    (https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
+- [RTL design using Verilog with SKY130 Technology](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
+    - [Brief Description of the Workshop](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
 
-- [Day 1 - Introduction to Verilog RTL design and Synthesis]
-(https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
-       - [Introduction to open-source simulator iverilog]
-       (https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
-       - [Labs using iverilog and gtkwave]
-       (https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
-       - [Introduction to Yosys and Logic synthesis]
-       (https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
-       - [Labs using Yosys and Sky130 PDKs]
-        (https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
+- [Day 1 - Introduction to Verilog RTL design and Synthesis](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
+       - [Introduction to open-source simulator iverilog](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
+       - [Labs using iverilog and gtkwav](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
+       - [Introduction to Yosys and Logic synthesis](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)
+       - [Labs using Yosys and Sky130 PDKs](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)

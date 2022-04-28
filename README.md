@@ -1,6 +1,10 @@
-# Advanced Physical Design using OpenLANE/Sky130
-[![Advanced-Physical-Design-using-OpenLANE_Sky130_1](https://user-images.githubusercontent.com/89193562/134464331-c6dbf721-80f0-4efa-98fa-820c485e9373.png)](https://www.vlsisystemdesign.com/advanced-physical-design-using-openlane-sky130/)
+# RTL design using Verilog with SKY130 Technology
+
+
+![cover pic workshop](https://user-images.githubusercontent.com/92054999/165689301-956d3570-449c-4e84-adf4-aeab16164152.PNG)
+
 ## Brief Description of the Workshop
 # *Index*
-- [Advanced Physical Design using OpenLANE/Sky130](https://github.com/VrushabhDamle/sky130AdvancedPhysicalDesignWorkshop/blob/main/README.md#advanced-physical-design-using-openlanesky130)
-    - [Brief Description of the Workshop](https://github.com/VrushabhDamle/sky130AdvancedPhysicalDesignWorkshop/blob/main/README.md#brief-description-of-the-workshop)
+- [RTL design using Verilog with SKY130 Technology](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#RTL-design-using-Verilog- with-SKY130-Technology)
+    - [Brief Description of the Workshop](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Brief-Description-of-the-Workshop)
+

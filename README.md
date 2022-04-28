@@ -9,4 +9,4 @@
     - [Brief Description of the Workshop](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Brief-Description-of-the-Workshop)
 
  - [Day 1 - Introduction to Verilog RTL design and Synthesis](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Day1-Introduction-to-Verilog-RTL-design-and-Synthesis)
-             - [Introduction to open-source simulator iverilog](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#part-1-Introduction-to-open-source-simulator-iverilog)
+    - [Introduction to open-source simulator iverilog](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#part-1-Introduction-to-open-source-simulator-iverilog)

@@ -28,4 +28,5 @@ On the First day, We learnt about the different tool used here  i.e.(iVerilog-Us
 ### Sub-Part 1: Introduction to Command prompt and Library
   - The command used to create the folder and git clone is shown below :
   ![l1](https://user-images.githubusercontent.com/92054999/165711632-1569ef7e-51db-4e42-87df-f62820d9eef4.PNG)
+  - Basic command such pwd, cd, ls and git clone in the command prompt were learnt.
 

@@ -186,18 +186,24 @@ On the second day , we focussed on the library sky130 and the different types of
                   ![synthesis(synchro_reset)2-skypic](https://user-images.githubusercontent.com/92054999/166071011-3a3d8f85-88b0-4aaf-814f-06e8b3ece57f.PNG)
 ### Sub-part 3:Optimization Technique
   - Optimization means simplification of any module. We have taken two special cases here to explain optimization
-  - Verilog code: module mul2(input [2:0]a,output [3:0]y);
-                  assign y=a*2;
-                  endmodule
+  - Verilog code:
+  ```
+   module mul2(input [2:0]a,output [3:0]y);
+   assign y=a*2;
+   endmodule
+   ```
   - The above code is basically a multiplier but we don't need any extra harware to design this.
                   ![synthesis  result -no hardware needed-1](https://user-images.githubusercontent.com/92054999/166072720-eb332627-897d-4d62-9096-64847433fff4.PNG)
                   
   - We have mapped with the sky130 Technology and verified that there s no need of extra hardware.
                    ![synthesis mul2p sky pic 2](https://user-images.githubusercontent.com/92054999/166072949-97fe529f-2675-430b-8b35-08e288e6a8b3.PNG)
 
-  - Verilog code: module mul8(input [2:0]a,output [5:0]y;
-                 assign y=a*9;
-                 endmodule
+  - Verilog code:
+   ``` 
+  module mul8(input [2:0]a,output [5:0]y;
+  assign y=a*9;
+  endmodule
+  ```
   - Likewise, here we don't need any extra hardware which is verified by simulation as well as synthesis.
                    ![synthesis report of a 2 nd code(p1)](https://user-images.githubusercontent.com/92054999/166073528-6676f12d-045b-4afa-ad8f-f8cad0209be6.PNG)
                    

@@ -332,4 +332,26 @@ else
 ![code for incomp_if](https://user-images.githubusercontent.com/92054999/166165166-a3e3c4eb-255a-4338-8a63-2a6a9929d14a.PNG)
 ![incomplete if gtk](https://user-images.githubusercontent.com/92054999/166165169-08ebf0c0-5a36-44e6-ace5-6efa97cb60a5.PNG)
 
-  
+### Sub-part 2:Case construct
+  -In this part, structure of case were analyzed and simulation were studied.
+This is a general if else construct,
+```
+module();
+input a,b;
+output d;
+always@(*)
+begin
+case(a,b)
+----
+---
+endcase
+end
+endmodule
+```
+  - In the given below verilog code. there is incomplete case statement used i.e 10 or 11 case is not used,which will lead to inferred latch.
+  - To eliminate this latch, we must use default statement in the case.
+![code](https://user-images.githubusercontent.com/92054999/166165309-c54f4737-ef3b-4af1-9f3c-16c0149e74f7.PNG)
+![simulation- when sel 1  is 1, out is latched](https://user-images.githubusercontent.com/92054999/166165311-e183633e-c7e2-4e0b-9c34-b56684707ae6.PNG)
+
+
+

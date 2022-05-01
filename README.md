@@ -30,10 +30,10 @@
      - [Sub-part 1:Introduction to flop](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-1-Introduction-to-flop)
      - [Sub-part 2:Coding style](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-2-Coding-style)
      - [Sub-part 3:Optimization Technique](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-3-Optimization-Technique)
-
-
-
-
+- [Day 3: Combinational and Sequential optimmization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Day-3-Combinational-and-Sequential-optimization)
+   - [Part 1:Introduction to Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-1-Introduction-to-Timing-libs)
+   - [Part 2:Combinational Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-2-Combinational-Optimization)
+   - [part 3:Sequential Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#part-3-Sequential-Optimization)
 # Day 1: Inception of Verilog Simulator-iVerilog, yosys and Skywater
 
 On the First day, We learnt about the different tool used here  i.e.(iVerilog-Used for RTL Simulation and Gate Level Simulations,yosys-Opensource Logic Synthesis Tool,Skywater 130nm Standard Cell Libraries) and concept of simulation and synthesis were analysed.
@@ -196,7 +196,7 @@ On the second day , we focussed on the library sky130 and the different types of
                   ![synthesis  result -no hardware needed-1](https://user-images.githubusercontent.com/92054999/166072720-eb332627-897d-4d62-9096-64847433fff4.PNG)
                   
   - We have mapped with the sky130 Technology and verified that there s no need of extra hardware.
-                   ![synthesis mul2p sky pic 2](https://user-images.githubusercontent.com/92054999/166072949-97fe529f-2675-430b-8b35-08e288e6a8b3.PNG)
+                  ![synthesis mul2p sky pic 2](https://user-images.githubusercontent.com/92054999/166072949-97fe529f-2675-430b-8b35-08e288e6a8b3.PNG)
 
   - Verilog code:
    ``` 
@@ -207,6 +207,28 @@ On the second day , we focussed on the library sky130 and the different types of
   - Likewise, here we don't need any extra hardware which is verified by simulation as well as synthesis.
                    ![synthesis report of a 2 nd code(p1)](https://user-images.githubusercontent.com/92054999/166073528-6676f12d-045b-4afa-ad8f-f8cad0209be6.PNG)
                    
-                   
+# Day 3: Combinational and Sequential optimization
+  - On the third day, we learnt about simplifying different types of circuit, be it combination or sequential circuit.In other words, optimization means to simplify the equation, so that area or power is saved.
+## Part 1:Introduction to Optimization
+  -  Optimization is an interesting area to explore with to respect to combinational and sequential circuit.In this part, we have explored steps to simplify the circuit functional design.     
+## Part 2:Combinational Optimization 
 
-                   
+  - The process of squezzung the logic to get the most optmised design so that area or power can be reduced.There are several method to do so like constant propagation, Direct propagation and boolean logic optimization.The simulation will clearly explain the combinational optimization.
+  - Verilog code:The Mux code is converted into and gate which is verified by the synthesis report.
+```
+module(input a, input b, output y);
+assign y= a?b:0;
+endmodule
+``` 
+![opt_check synthesis,sky pic 1](https://user-images.githubusercontent.com/92054999/166160538-3847c0ab-569c-4b99-8297-629f00bbbf3b.PNG)
+
+## part 3:Sequential Optimization
+  - In this part, We have used sequential constant propagation technique to reduce the functionality of the circuit i.e. making the output constant.
+  - In the code, we started with mux with input 1'b1 and In the synthesis report there is constant assigned to the output.So, this circuit is optimized.
+![codenew 1](https://user-images.githubusercontent.com/92054999/166160910-00c83000-e970-4f79-8654-57fdee01229f.PNG)
+![dff_const2 gtkwave](https://user-images.githubusercontent.com/92054999/166160941-af70ef33-14f6-4935-bc44-c0f868da5b24.PNG)
+![dff_2-sequential optimisation ,no flip flop ,code+sky pic](https://user-images.githubusercontent.com/92054999/166160953-75984286-6f34-4f53-9601-10e50ff20bb3.PNG)
+
+
+
+  

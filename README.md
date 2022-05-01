@@ -41,6 +41,11 @@
    -  [Part 3:Synthesis Simulation Mismatch](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-3-Synthesis-Simulation-Mismatch)
        - [Sub-part 1:Missing of sensitivity list](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-1-Missing-of-sentivity-list) 
        - [Sub-part 2:Blocking Statement & non-blocking statement](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-2-Blocking-Statement-&-non-blocking-statement)
+ - [Day 5: IF,case,for and generate for](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Day-5-IF-case-for-and-generate-for)
+   - [Part 1:If and case construct](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-1-If-and-case-construct)
+       - [Sub-part 1:IF construct](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-1-IF-construct)
+       - [Sub-part 2:Case construct](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-2-Case-construct)
+   - [Part 2:for and generate for](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-2-for-and-generate-for)
 # Day 1: Inception of Verilog Simulator-iVerilog, yosys and Skywater
 
 On the First day, We learnt about the different tool used here  i.e.(iVerilog-Used for RTL Simulation and Gate Level Simulations,yosys-Opensource Logic Synthesis Tool,Skywater 130nm Standard Cell Libraries) and concept of simulation and synthesis were analysed.
@@ -292,7 +297,7 @@ endmodule
 ### Sub-part 2:Blocking Statement & non-blocking statement
   - This can be one of the reason for synthesis simulation mismatch, as using blocking statement in always block is dangerous to use or you have to take more care.
     The simulation and synthesis results clearly shows the mismatch.
-  - The verilog code for the caveats with nlocking is given below:
+  - The verilog code for the caveats with blocking is given below:
 ```
 module blocking_caveat(input a,input b, input c,output reg d);
 reg x;

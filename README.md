@@ -312,3 +312,24 @@ endmodule
 ![error in gtk wave ,taking old value,blocking issue](https://user-images.githubusercontent.com/92054999/166163570-dee3fc13-b314-48fb-adb0-0db07ed10e54.PNG)
 
 ![gls output of theory 1,which corrct](https://user-images.githubusercontent.com/92054999/166163575-a8410e99-8a84-4e48-9eae-0794f4c1678d.PNG)
+# Day 5: IF,case,for and generate for
+  -On this day, we have focused on the fundamental principal of if,case,for loop,generate for and their structure.If Incomplete structure ,It would lead to Inferred Latches.
+## Part 1:If and case construct]
+## Sub-part 1:IF construct
+  -In this part, we have analyzed the structure of if statement and it's application.
+ This is a general if else construct,
+
+```
+if(condtion1)
+ -----
+elseif(condition2)
+ -----
+else
+ -----
+```
+  - In the given below verilog code, there is incomplete if ,which will result into inferred latch.
+  - When i0=1, the output will follow i1 but when i0=0, output will give previous value.
+![code for incomp_if](https://user-images.githubusercontent.com/92054999/166165166-a3e3c4eb-255a-4338-8a63-2a6a9929d14a.PNG)
+![incomplete if gtk](https://user-images.githubusercontent.com/92054999/166165169-08ebf0c0-5a36-44e6-ace5-6efa97cb60a5.PNG)
+
+  

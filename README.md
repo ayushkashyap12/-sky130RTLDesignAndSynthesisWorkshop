@@ -34,6 +34,7 @@
    - [Part 1:Introduction to Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-1-Introduction-to-Timing-libs)
    - [Part 2:Combinational Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-2-Combinational-Optimization)
    - [part 3:Sequential Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#part-3-Sequential-Optimization)
+       - [ Sub-part1:Sequential optimisation unused outputs](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part1-Sequential-optimisation-unused-outputs)
 # Day 1: Inception of Verilog Simulator-iVerilog, yosys and Skywater
 
 On the First day, We learnt about the different tool used here  i.e.(iVerilog-Used for RTL Simulation and Gate Level Simulations,yosys-Opensource Logic Synthesis Tool,Skywater 130nm Standard Cell Libraries) and concept of simulation and synthesis were analysed.
@@ -229,6 +230,12 @@ endmodule
 ![dff_const2 gtkwave](https://user-images.githubusercontent.com/92054999/166160941-af70ef33-14f6-4935-bc44-c0f868da5b24.PNG)
 ![dff_2-sequential optimisation ,no flip flop ,code+sky pic](https://user-images.githubusercontent.com/92054999/166160953-75984286-6f34-4f53-9601-10e50ff20bb3.PNG)
 
+### Sub-part1:Sequential optimisation unused outputs
+  - In this part,Unnecessory pins of the design were removed in the synthesis report,which is beneficial for the circuit.
+  -  In the example below, we have taken 3 flip flop example but after synthesis It is reduced to 1 flip flop as 2 pins were not used in the circuit.
+ 
+![code new](https://user-images.githubusercontent.com/92054999/166161691-6ea2f5b9-9c58-4809-bfff-9cf6ac066279.PNG)
+![analysis of code-showing 1 ff as 3 ff](https://user-images.githubusercontent.com/92054999/166161697-e81a282c-067c-4699-a1d9-65bdb36581fd.PNG)
+![skypic of unused count](https://user-images.githubusercontent.com/92054999/166161700-50b488c2-0708-450d-b1b7-2e4ad024b388.PNG)
 
 
-  

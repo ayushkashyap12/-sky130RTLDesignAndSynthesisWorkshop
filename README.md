@@ -34,7 +34,13 @@
    - [Part 1:Introduction to Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-1-Introduction-to-Timing-libs)
    - [Part 2:Combinational Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-2-Combinational-Optimization)
    - [part 3:Sequential Optimization](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#part-3-Sequential-Optimization)
-       - [ Sub-part1:Sequential optimisation unused outputs](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part1-Sequential-optimisation-unused-outputs)
+       - [ Sub-part1:Sequential optimisation unused outputs](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part1-Sequential-optimisation-unused-outputs) 
+ - [Day 4:GLS,Synthesis simulation Mismatch and Blocking/Non blocking statements](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Day-4-GLS-Synthesis-simulation-Mismatch-and-Blocking-Non-blocking-statements)
+   -  [Part 1:GLSConcepts And Flow Using Iverilog](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-1-GLS-Concepts-And-Flow-Using-Iverilog)
+   -  [Part 2:Blocking And Non Blocking Statements](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-2-Blocking-And-Non-Blocking-Statements)
+   -  [Part 3:Synthesis Simulation Mismatch](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-3-Synthesis-Simulation-Mismatch)
+       - [Sub-part 1:Missing of sensitivity list](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-1-Missing-of-sentivity-list) 
+       - [Sub-part 2:Blocking Statement & non-blocking statement](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-2-Blocking-Statement-&-non-blocking-statement)
 # Day 1: Inception of Verilog Simulator-iVerilog, yosys and Skywater
 
 On the First day, We learnt about the different tool used here  i.e.(iVerilog-Used for RTL Simulation and Gate Level Simulations,yosys-Opensource Logic Synthesis Tool,Skywater 130nm Standard Cell Libraries) and concept of simulation and synthesis were analysed.
@@ -238,4 +244,66 @@ endmodule
 ![analysis of code-showing 1 ff as 3 ff](https://user-images.githubusercontent.com/92054999/166161697-e81a282c-067c-4699-a1d9-65bdb36581fd.PNG)
 ![skypic of unused count](https://user-images.githubusercontent.com/92054999/166161700-50b488c2-0708-450d-b1b7-2e4ad024b388.PNG)
 
+# Day 4:GLS,Synthesis simulation Mismatch and Blocking/Non blocking statement
+  - On this day, we learnt about Importance of Gate level simulation, blocking /non blocking statements and caveats related to it. At last, we analyzed the reason to simulation synthesis mismatch.
+##  Part 1:GLS Concepts And Flow Using Iverilog
+  - Gate level simulation  is used to verify the logical correctness of design after synthesis as well as ensuring thw  timing of the design.
+  - For  checking the timing, GLS needs to be run with delay annotation.
+  - for this GLS, we need netlist,testbench and the cell library to the iverilog(simulator tool),we can verify in the gtkwave window.
+## Part 2:Blocking And Non Blocking Statements
+  - In blocking statements ('='), It executes the statement in the order It is written i.e. one by one evaluation is done where as in Non blocking('<='),It executes all the RHS when always block is entered and assigned to LHS i.e. parallel evaluation.
+## Part 3:Synthesis Simulation Mismatch
+  - In this part, we have analyzed about the mismatch of iverilog simulation and synthesis of gate level simulation, as both differ in some special case due missing of sensitivity list or caveats with blocking/non-blocking statement.
+### Sub-part 1:Missing of sensitivity list
+  - In this we have observed how the senstivity list impact the output and as a result simulation synthesis mismatch occur.
+  - The verilog code is having always@(sel) i.e. output will change only when sel line changed, This results into faulty output.To elimiante this , we should go for always@(*) ,this will take care of the all the input present in the circuit.
+  
+ ```
+module mux(input i0, input i1, input sel,output reg y)
 
+always@(sel)
+begin
+  if(sel)
+    y=i1;
+  else
+    y=i0;
+end
+endmodule
+```
+The correct way of writing the code is:
+
+```
+module mux(input i0, input i1, input sel,output reg y)
+
+always@(*)
+begin
+  if(sel)
+    y=i1;
+  else
+    y=i0;
+end
+endmodule
+
+```
+![gtkwave for bad_mux v](https://user-images.githubusercontent.com/92054999/166163338-72626061-1d67-401b-b8c9-06db500660f7.PNG)
+![synthesis for gls in gtkwave](https://user-images.githubusercontent.com/92054999/166163344-f177d08b-dc3d-42ae-bfb2-b342e76abe41.PNG)
+  - The simulation and synthesis results differ due to mismatch in sensitivity list.
+
+### Sub-part 2:Blocking Statement & non-blocking statement
+  - This can be one of the reason for synthesis simulation mismatch, as using blocking statement in always block is dangerous to use or you have to take more care.
+    The simulation and synthesis results clearly shows the mismatch.
+  - The verilog code for the caveats with nlocking is given below:
+```
+module blocking_caveat(input a,input b, input c,output reg d);
+reg x;
+always @(*)
+begin
+d=x&c;
+x=a|b;
+end
+endmodule
+  
+```
+![error in gtk wave ,taking old value,blocking issue](https://user-images.githubusercontent.com/92054999/166163570-dee3fc13-b314-48fb-adb0-0db07ed10e54.PNG)
+
+![gls output of theory 1,which corrct](https://user-images.githubusercontent.com/92054999/166163575-a8410e99-8a84-4e48-9eae-0794f4c1678d.PNG)

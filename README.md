@@ -62,15 +62,16 @@ On the First day, We learnt about the different tool used here  i.e.(iVerilog-Us
 ## Part 3:Introduction to Yosys and Logic synthesis
  ### Sub-part 1:Introduction to yosys
   - Basically , this is the synthesizer we have used here. It is the tool to convert rtl into netlist.
-  - The block Diagram of the Design for the setup  is shown below:
+  - The flow graph of the of  the setup  is shown below:
 
-   
+   ![woww 2](https://user-images.githubusercontent.com/92054999/166156724-5b0a3e18-3b3c-4385-b7bd-3a1ca52e868a.PNG)
+
   
-![yosys setup](https://user-images.githubusercontent.com/92054999/165747782-a0b5eaa3-8067-4c08-9e58-6ef8cd7c814c.PNG)
-   - The Verification of the synthesis can be in the following manner:
+   - The simulation is done by giving design and test bench to the simulator tool i.e iverilog and then  value changed dumped file is obtained, we can see the timing 
+     analysis in the gtkwave window.
     
 
-![p2](https://user-images.githubusercontent.com/92054999/165748256-b0711e6b-6fc1-454b-abbd-01c362201558.PNG)
+
 
 
   - The primary input and primary output will remain same between RTL design and Synthesized list-SAME testbench can be used.
@@ -78,19 +79,26 @@ On the First day, We learnt about the different tool used here  i.e.(iVerilog-Us
   
   - Register Transfer Level (RTL) It is the behavioral representation of the required specification. The Figure is shown below, which explains clearly
  
+```
+module(input a,output b);
+assign y=b;
 
-![cap1](https://user-images.githubusercontent.com/92054999/165750996-1a61f10b-457f-4a40-a39c-29d985cc453c.PNG)
+endmodule
+
+```
  
   - Synthesis is the process of the conversion of RTL to gate level translation
+  -  The RTL and the library file is fed into the synthesis i.e. yosys and then the generated figure is netlist.
   - The design is converted into gates and the connections are made between the gate and this file is called netlist.
        
-![synthesis](https://user-images.githubusercontent.com/92054999/165752623-77f6e455-e25c-44bc-a59a-a08248ef4ec2.PNG)
+
  
   - .lib file is the collection of the logical modules i.e basic logic gate and,or etc.
   - The gate can be slow or fast depending on the use of the circuit.
     
   -Combination delay in logic path determines the maximun speed of operation of the digital logic circuit.
-    ![c2](https://user-images.githubusercontent.com/92054999/165753937-7f5dc88a-719a-41aa-8ebb-1d74ce875373.PNG)
+    ![woowww1](https://user-images.githubusercontent.com/92054999/166156973-4abd9c02-be91-49a5-bdfd-dae6758ca711.PNG)
+
     
    - So, we need cells that work fast to make Tcombinational delay small.So, the setup time is constraint is met.
    - However, We also need cell that work slow to meet the hold time constraint.
@@ -101,9 +109,7 @@ On the First day, We learnt about the different tool used here  i.e.(iVerilog-Us
    - Comparison of fast cell and slow cell: 
       - load in Digital circuit is generally capacitance
       - We can say to charge capacitance fast , we need more current i.e. wider transistor. Hence, Less delay but more will be power ,area and vise versa.
-   - Finally, we can con conclude synthesis from the given below figure:
-     
-![synthesis with gate](https://user-images.githubusercontent.com/92054999/165773786-5882ac42-853a-43fd-a2db-4a0ede187e4d.PNG)
+ 
 
 
 ## Part 4:Labs using Yosys and Sky130 PDKs

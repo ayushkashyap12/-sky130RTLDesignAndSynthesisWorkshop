@@ -45,7 +45,9 @@
    - [Part 1:If and case construct](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-1-If-and-case-construct)
        - [Sub-part 1:IF construct](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-1-IF-construct)
        - [Sub-part 2:Case construct](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-2-Case-construct)
-   - [Part 2:for and generate for](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-2-for-and-generate-for)
+   - [Part 2:for loop and generate for](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-2-for-and-generate-for)
+       - [Sub-part 1:for loop ](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-1-for-loop)
+       - [Sub-part 2:generate for](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-2-generate-for)
 # Day 1: Inception of Verilog Simulator-iVerilog, yosys and Skywater
 
 On the First day, We learnt about the different tool used here  i.e.(iVerilog-Used for RTL Simulation and Gate Level Simulations,yosys-Opensource Logic Synthesis Tool,Skywater 130nm Standard Cell Libraries) and concept of simulation and synthesis were analysed.
@@ -315,7 +317,7 @@ endmodule
 # Day 5: IF,case,for and generate for
   -On this day, we have focused on the fundamental principal of if,case,for loop,generate for and their structure.If Incomplete structure ,It would lead to Inferred Latches.
 ## Part 1:If and case construct]
-## Sub-part 1:IF construct
+###Sub-part 1:IF construct
   -In this part, we have analyzed the structure of if statement and it's application.
  This is a general if else construct,
 
@@ -352,6 +354,16 @@ endmodule
   - To eliminate this latch, we must use default statement in the case.
 ![code](https://user-images.githubusercontent.com/92054999/166165309-c54f4737-ef3b-4af1-9f3c-16c0149e74f7.PNG)
 ![simulation- when sel 1  is 1, out is latched](https://user-images.githubusercontent.com/92054999/166165311-e183633e-c7e2-4e0b-9c34-b56684707ae6.PNG)
+
+
+## Part 2:for loop and generate for
+### Sub-part 1:for loop
+  - For loop is mainly used for evaluating the expression multiple times.For ex: suitable fordesigning  16:1 mux,32:1 mux.
+  -  The Verilog code and simulation is shown below:
+![code](https://user-images.githubusercontent.com/92054999/166191580-d82bba7e-a203-4ae7-8ff6-952813765502.PNG)
+![gtkwave for this code](https://user-images.githubusercontent.com/92054999/166191669-548f2c85-108f-4a0b-aee3-c5200c0b7bd4.PNG)
+
+
 
 
 

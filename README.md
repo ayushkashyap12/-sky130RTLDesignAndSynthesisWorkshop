@@ -48,6 +48,7 @@
    - [Part 2:for loop and generate for](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Part-2-for-and-generate-for)
        - [Sub-part 1:for loop ](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-1-for-loop)
        - [Sub-part 2:generate for](https://github.com/ayushkashyap12/-sky130RTLDesignAndSynthesisWorkshop/edit/main/README.md#Sub-part-2-generate-for)
+ - [References](https://github.com/VrushabhDamle/sky130AdvancedPhysicalDesignWorkshop/blob/main/README.md#References)
 # Day 1: Inception of Verilog Simulator-iVerilog, yosys and Skywater
 
 On the First day, We learnt about the different tool used here  i.e.(iVerilog-Used for RTL Simulation and Gate Level Simulations,yosys-Opensource Logic Synthesis Tool,Skywater 130nm Standard Cell Libraries) and concept of simulation and synthesis were analysed.
@@ -359,11 +360,25 @@ endmodule
 ## Part 2:for loop and generate for
 ### Sub-part 1:for loop
   - For loop is mainly used for evaluating the expression multiple times.For ex: suitable fordesigning  16:1 mux,32:1 mux.
+  - For loop is used inside always block.
   -  The Verilog code and simulation is shown below:
 ![code](https://user-images.githubusercontent.com/92054999/166191580-d82bba7e-a203-4ae7-8ff6-952813765502.PNG)
 ![gtkwave for this code](https://user-images.githubusercontent.com/92054999/166191669-548f2c85-108f-4a0b-aee3-c5200c0b7bd4.PNG)
 
+### Sub-part 2:generate for
+  - Generate for loop is used to Instatiate the block.
+  - It can't be used inside always block.
+  - In the verilog code shown below, We have taken the example of ripple carry adder.
+ 
 
 
+![code new](https://user-images.githubusercontent.com/92054999/166196035-a96b09f7-f58d-4469-bedb-b1650622975d.PNG)
+
+![simulation of multiple file](https://user-images.githubusercontent.com/92054999/166196050-a160de30-ebfe-4302-b37b-bd54b85e43c4.PNG)
+
+![simulation](https://user-images.githubusercontent.com/92054999/166196068-c7f14bcf-d7e6-4b5d-b961-a09cc6d6dee5.PNG)
 
 
+# References
+- [https://github.com/The-OpenROAD-Project/OpenLane](https://github.com/The-OpenROAD-Project/OpenLane)
+- https://github.com/VrushabhDamle/sky130AdvancedPhysicalDesignWorkshop
